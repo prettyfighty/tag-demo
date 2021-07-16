@@ -1,24 +1,31 @@
-# README
+# Tag with Select2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+我的[部落格](https://lailai-blog.gq)：https://lailai-blog.gq
 
-Things you may want to cover:
+詳細步驟與說明，請參考[這篇文章](https://lailai-blog.gq/2021/07/16/Tag-With-Select2)
 
-* Ruby version
+# Version
 
-* System dependencies
+- Ruby 2.7.2
 
-* Configuration
+- Rails 6.1.4
 
-* Database creation
+# Install
 
-* Database initialization
+1. $`bundle install`
 
-* How to run the test suite
+2. $`yarn install`
 
-* Services (job queues, cache servers, search engines, etc.)
+3. $`rails db:migrate`
 
-* Deployment instructions
+4. $`rails db:seed`
 
-* ...
+5. $`foreman s`
+
+之後打開瀏覽器，輸入網址：**localhost:3000**
+
+應該可以看到這個畫面，裡面有seed產生的20筆商品資料。
+
+![](https://lailai-blog.gq/2021/07/16/Tag-With-Select2/02-product-list.jpg)
+
+
