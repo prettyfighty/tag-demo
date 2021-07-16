@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = Product.includes(:tags).order(created_at: :desc)
   end
 
   def new
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :description, :price)
+    params.require(:product).permit(:name, :description, :price, :tag_list)
   end
 
   def find_product

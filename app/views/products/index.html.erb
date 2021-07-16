@@ -9,6 +9,7 @@
     <thead>
       <tr>
         <th>品名</th>
+        <th>標籤</th>
         <th>簡介</th>
         <th>價格</th>
         <th></th>
@@ -19,6 +20,7 @@
       <% @products.each do |product| %>
         <tr>
           <td><%= link_to product.name, product_path(product), class: "text-decoration-none text-info fw-bold" %></td>
+          <td><%= product.tag_list %></td>
           <td class="overflow-hidden w-solid textOverflow"><%= product.description %></td>
           <td>$ <%= number_with_delimiter(product.price, delimiter: ',') %></td>
           <td><%= link_to "修改", edit_product_path(product), class: "btn btn-outline-primary" %></td>
