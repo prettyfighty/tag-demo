@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="my-3">商品列表</h1>
+
+  <div>
+    <%= link_to "新增商品",  new_product_path, class: "btn btn-danger my-3" %>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>品名</th>
+        <th>簡介</th>
+        <th>價格</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="align-middle">
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= link_to product.name, product_path(product), class: "text-decoration-none text-info fw-bold" %></td>
+          <td class="overflow-hidden w-solid textOverflow"><%= product.description %></td>
+          <td>$ <%= number_with_delimiter(product.price, delimiter: ',') %></td>
+          <td><%= link_to "修改", edit_product_path(product), class: "btn btn-outline-primary" %></td>
+          <td><%= link_to "刪除", product_path(product), method: "delete", data: {confirm: "是否確認刪除？"}, class: "btn btn-outline-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

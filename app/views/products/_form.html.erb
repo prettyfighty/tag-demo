@@ -1,0 +1,14 @@
+<% if product.errors.any? %>
+  <ul>
+    <% product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= simple_form_for(product) do |f| %>
+  <%= f.input :name, label: "品名", input_html: {class: "form-control"} %>
+  <%= f.input :description, label: "簡介", input_html: {class: "form-control"} %>
+  <%= f.input :price, label: "價格", input_html: {class: "form-control"} %>
+  <%= f.button :submit, class: "btn btn-danger my-3" %>
+<% end %>

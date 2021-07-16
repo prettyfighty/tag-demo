@@ -1,0 +1,20 @@
+<div class="container">
+
+  <h1 class="my-3 fw-bold"><%= @product.name %></h1>
+
+  <ul>
+    <li>
+      <span class="fw-bold"></span>
+      <%= @product.description %>
+    </li>
+    <li>
+      <span class="fw-bold">$ </span>
+      <%= number_with_delimiter(@product.price, delimiter: ',') %>
+    </li>
+  </ul>
+
+  <div>
+    <%= link_to "返回商品列表", products_path, class: "btn btn-outline-danger" %>
+  </div>
+
+</div>

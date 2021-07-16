@@ -1,0 +1,19 @@
+#notice {
+  background-color: rgb(248, 250, 219);
+  color: rgb(211, 1, 1);
+}
+
+abbr[title="required"] {
+  color: #f00;
+  text-decoration: none !important;
+}
+
+.textOverflow {
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.w-solid {
+  max-width: 20rem;
+}
