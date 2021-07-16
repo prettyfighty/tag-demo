@@ -17,3 +17,18 @@ abbr[title="required"] {
 .w-solid {
   max-width: 20rem;
 }
+
+.tag {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #cca700;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid #cca700;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}

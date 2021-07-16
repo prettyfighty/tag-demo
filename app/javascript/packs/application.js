@@ -18,6 +18,10 @@ import "styles"
 import "bootstrap"
 const bootstrap = require('bootstrap')
 
+// select2
+import "select2"
+import "select2/dist/css/select2.css"
+
 document.addEventListener("turbolinks:load", () => {
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -26,6 +30,11 @@ document.addEventListener("turbolinks:load", () => {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
+  })
+
+  $(".js-tag-select").select2({
+    tags: true,
+    tokenSeparators: [',', ' ']
   })
 })
 
